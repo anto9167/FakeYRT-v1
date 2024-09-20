@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass Selection</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    .centered-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%; /* You can adjust the width as needed */
+        
+    }
+
+    body {
+        text-align: center;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color:darksalmon;
+    }
+
+    p {
+      font-size: 25px;
+    }
+
+    h2 {
+      font-size: 50px
+    }
+
+    button {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 30px;
+      background-color: #189cd8;
+      border-color: #0079c2;
+      color: white;
+      
+    }
+</style>
+</head>
+<body>
+    <div id="pass-selection" class="center">
+        <h1>Select a Pass</h1>
+        <button onclick="goToPassPage('Child')">Child ❌ </button>
+        <p></p>
+        <button onclick="goToPassPage('Youth')">Youth</button>
+        <p></p>
+        <button onclick="goToPassPage('Adult')">Adult ❌</button>
+        <p></p>
+        <button onclick="goToPassPage('Senior')">Senior ❌</button>
+        
+    </div>
+    <div>
+        <p>Item's marked with "❌" are not currently active, and will redirect you to a Youth pass.</p>
+    </div>
+
+    <script>
+        function goToPassPage(passType) {
+            window.location.href = "pass.html?type=" + passType;
+        }
+    </script>
+</body>
+</html>

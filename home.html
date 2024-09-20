@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake YRT</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .centered-image {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%; /* You can adjust the width as needed */
+          
+      }
+
+      body {
+          text-align: center;
+          font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          background-color:darksalmon;
+      }
+
+      p {
+        font-size: 25px;
+      }
+
+      h2 {
+        font-size: 50px
+      }
+
+      button {
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 30px;
+        background-color: #189cd8;
+        border-color: #0079c2;
+        color: white;
+        
+      }
+  </style>
+</head>
+<body>
+    <div id="home-page" class="center">
+        <img src="images/FYRT-logo2.png" alt="YRT Logo" class="centered-image">
+        <p>FakeYRT - Use to get on the YRT bus for free!</p>
+        <button onclick="goToPassSelection()">Select Your Pass</button>
+        <p></p>
+        <h2>What is FakeYRT?</h2>
+        <p>FakeYRT is a website that is used to represent a fake bus pass. You can use this bus pass on any YRT bus. Show the bus pass/bus code to the bus driver and they will let you on the bus! (This method works 98% of the time)</p>
+    </div>
+
+    <script>
+        function goToPassSelection() {
+            window.location.href = "pass-selection.html";
+        }
+    </script>
+</body>
+</html>

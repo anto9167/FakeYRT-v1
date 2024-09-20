@@ -1,0 +1,163 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.center {
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #00ADEF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #007AB8;
+}
+
+#pass-selection h1 {
+    margin-bottom: 30px;
+}
+
+#pass-selection button {
+    display: block;
+    margin: 10px auto;
+    padding: 15px 50px;
+    font-size: 18px;
+}
+
+#pass-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    background-color: #83D100;
+}
+
+#pass-info {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    text-align: center;
+}
+
+#pass-info img {
+    position: absolute;
+    width: 100px;
+    top: 20px;
+    z-index: 2;
+}
+
+#pass-info video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#toggle-video-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #00ADEF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#countdown {
+    background-color: #00ADEF;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* General page styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container styling */
+#pass-page {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Video container */
+#video-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Videos styling */
+video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Countdown styling */
+#countdown {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Toggle button container */
+#toggle-btn-container {
+    margin-top: 20px;
+}
+
+/* Styling the toggle button */
+#toggle-video-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for button */
+#toggle-video-btn:hover {
+    background-color: #0056b3;
+}
+
