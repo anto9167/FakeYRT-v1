@@ -5,6 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pass Page</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add responsive styles directly in the HTML for simplicity */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000; /* Optional background color */
+        }
+
+        #pass-page {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #pass-info {
+            position: relative;
+            width: 100%;
+            height: 80%; /* Adjust as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video {
+            width: 100%; /* Ensures video takes full width of container */
+            height: 100%; /* Ensures video takes full height of container */
+            object-fit: cover; /* Makes sure the video covers the entire container */
+        }
+
+        #countdown {
+            position: absolute;
+            bottom: 20px;
+            color: white;
+            font-size: 1.5rem;
+            background: rgba(0, 0, 0, 0.5); /* Transparent background */
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            #countdown {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="pass-page">
@@ -12,7 +66,7 @@
             <video id="bg-video-1" autoplay muted loop>
                 <source src="videos/YRT Pay animation+text - 1.mp4" type="video/mp4">
             </video>
-            <video id="bg-video-2" autoplay muted loop width="750px">
+            <video id="bg-video-2" autoplay muted loop hidden>
                 <source src="videos/1 Youth animation+text+icons.mp4" type="video/mp4">
             </video>
         </div>
