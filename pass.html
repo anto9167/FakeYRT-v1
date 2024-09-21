@@ -4,7 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pass Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            font-family: Arial, sans-serif;
+        }
+
+        #pass-page {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #pass-info {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            flex-grow: 1; /* Allows video container to fill the remaining space */
+            justify-content: center;
+            align-items: center;
+        }
+
+        #pass-info video {
+            max-width: 100%;
+            max-height: 45vh; /* Videos take up a maximum of 45% of the screen height */
+            width: auto;
+            height: auto;
+            object-fit: contain; /* Ensures videos maintain aspect ratio and fit within the container */
+        }
+
+        #countdown {
+            height: 15vh; /* Use 15% of the screen height for the countdown */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+            background-color: #007bff;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            #countdown {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="pass-page">
@@ -12,7 +69,7 @@
             <video id="bg-video-1" autoplay muted loop>
                 <source src="videos/YRT Pay animation+text - 1.mp4" type="video/mp4">
             </video>
-            <video id="bg-video-2" autoplay muted loop width="750px">
+            <video id="bg-video-2" autoplay muted loop>
                 <source src="videos/1 Youth animation+text+icons.mp4" type="video/mp4">
             </video>
         </div>
@@ -27,22 +84,7 @@
         const passType = urlParams.get('type');
         document.title = passType + " Pass";
 
-        let video1Visible = true;
         let timeRemaining = 2 * 60 * 60; // 2 hours in seconds
-
-        function toggleVideo() {
-            const video1 = document.getElementById('bg-video-1');
-            const video2 = document.getElementById('bg-video-2');
-
-            if (video1Visible) {
-                video1.hidden = true;
-                video2.hidden = false;
-            } else {
-                video1.hidden = false;
-                video2.hidden = true;
-            }
-            video1Visible = !video1Visible;
-        }
 
         function startCountdown() {
             setInterval(() => {
